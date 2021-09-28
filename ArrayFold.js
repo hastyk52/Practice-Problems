@@ -123,7 +123,7 @@ class Solution {
 
 
 
-// Given a list of integers  of evn length(n) return the minimun number of operations such that for every i, nums[i] + nums[n - i - 1] equals the same number.
+// Given a list of integers  of even length(n) return the minimun number of operations such that, for every i, nums[i] + nums[n - i - 1] equals the same number. Consider an operation changing a number to anything between 1 and max(nums)
 
 // I: array of number od even length
 // O: count - minimun number of operations
