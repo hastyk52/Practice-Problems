@@ -3,21 +3,15 @@
  * @param {number} target
  * @return {number[]}
  */
-var twoSum = function(nums, target) {
-  const numsMap = {};
-  for (let i = 0; i < nums.length; i++){
-      if (numsMap[nums[i]] === undefined) {
-          numsMap[nums[i]] = i;
-      } else if (target - nums[i] === nums[i]) {
-          return [numsMap[nums[i]], i]
-      }
-  }
-  for (let i = 0; i < nums.length; i++) {
-      if (numsMap[target - nums[i]] && numsMap[target - nums[i]] !== i) {
-          return [i, numsMap[target - nums[i]]];
-      }
-  }
-};
+ var twoSum = function(nums, target) {
+    const numsMap = {};
+    for (let i = 0; i < nums.length; i++){
+        if (numsMap[target - nums[i]]) {
+            return [numsMap[target - nums[i]], i]
+        }
+        numsMap[nums[i]] = i;
+    }
+  };
 
 // given an array of integers and an integer target, return the two indices for the numbers that add up to target
 
